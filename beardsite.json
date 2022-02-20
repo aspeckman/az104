@@ -291,7 +291,7 @@
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "Standard_LRS",
+                            "storageAccountType": "Premium_LRS",
                             "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_backendSERVER_name'), '_OsDisk_1_ef3ab3c577ea4dd5827852baae056008'))]"
                         },
                         "deleteOption": "Detach",
@@ -351,7 +351,7 @@
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "Standard_LRS",
+                            "storageAccountType": "Premium_LRS",
                             "id": "[resourceId('Microsoft.Compute/disks', concat(variables('backendserver'), '_OsDisk_1_ef3ab3c577ea4dd5827852baae056008'))]"
                         },
                         "deleteOption": "Detach",
@@ -412,7 +412,7 @@
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "Standard_LRS",
+                            "storageAccountType": "Premium_LRS",
                             "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_frontendSERVER_name'), '_OsDisk_1_c6d33243208549028193e578673837b9'))]"
                         },
                         "deleteOption": "Detach",
