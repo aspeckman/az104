@@ -42,7 +42,8 @@
     "variables": {
         "backendserver": "backend2",
         "nicname": "backend2nic",
-        "backendpip": "backendpip"
+        "backendpip": "backendpip",
+        "adminpsw": "Password!1111"
 
     },
     "resources": [
@@ -298,6 +299,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_backendSERVER_name')]",
                     "adminUsername": "boxingmin",
+                    "adminPassword": "[variables('adminpsw')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
@@ -353,6 +355,7 @@
                 "osProfile": {
                     "computerName": "[variables('backendserver')]",
                     "adminUsername": "boxingmin",
+                    "adminPassword": "[variables('adminpsw')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
@@ -409,6 +412,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_frontendSERVER_name')]",
                     "adminUsername": "boxingmin",
+                    "adminPassword": "[variables('adminpsw')]",
                     "linuxConfiguration": {
                         "disablePasswordAuthentication": false,
                         "provisionVMAgent": true,
