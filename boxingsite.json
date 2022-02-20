@@ -641,7 +641,7 @@
                             "privateIPAddress": "10.0.4.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('nicname'))]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('backendpip'))]"
                             },
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_boxingSite_vnet_name'), 'default')]"
